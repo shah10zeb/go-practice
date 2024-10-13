@@ -13,8 +13,8 @@ const portNumber = ":8080"
 
 // main application function
 func main() {
-	http.HandleFunc("/", handlers.Home)
 	http.HandleFunc("/about", handlers.About)
+	http.HandleFunc("/", handlers.Home)
 	fmt.Printf("Starting port on %s", portNumber)
 	_ = http.ListenAndServe(portNumber, nil)
 }
