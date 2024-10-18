@@ -8,6 +8,12 @@
                 <p>This is About text</p>
                 <p>This is About text2</p>
                 <p>This Data is from : {{index .StringMap "test"}}</p>
+                <p>{{if ne (index .StringMap "remote_ip") ""}}
+                    Your Remote Ip is  {{index .StringMap "remote_ip" }}
+                    {{else}}
+                    I dont your IP VISIT HOME so I can know it
+                    {{end}}
+                </p>
             </div>
         </div>
 
